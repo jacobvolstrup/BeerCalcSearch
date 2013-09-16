@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+# Visual Web Developer Express 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerCalcDataSync", "BeerCalcDataSync\BeerCalcDataSync.csproj", "{19BA6F65-F54C-4C3A-9D2D-C1E31A3092CF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerCalcSyncGui", "BeerCalcSyncGui\BeerCalcSyncGui.csproj", "{CE4980C5-6371-4B67-ACFD-7EE8A9745753}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeerCalcDataModel", "BeerCalcDataModel\BeerCalcDataModel.csproj", "{09B9FE7D-1095-474E-852E-AB56F863092D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,16 @@ Global
 		{CE4980C5-6371-4B67-ACFD-7EE8A9745753}.Release|Mixed Platforms.Build.0 = Release|x86
 		{CE4980C5-6371-4B67-ACFD-7EE8A9745753}.Release|x86.ActiveCfg = Release|x86
 		{CE4980C5-6371-4B67-ACFD-7EE8A9745753}.Release|x86.Build.0 = Release|x86
+		{09B9FE7D-1095-474E-852E-AB56F863092D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09B9FE7D-1095-474E-852E-AB56F863092D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09B9FE7D-1095-474E-852E-AB56F863092D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{09B9FE7D-1095-474E-852E-AB56F863092D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{09B9FE7D-1095-474E-852E-AB56F863092D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{09B9FE7D-1095-474E-852E-AB56F863092D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09B9FE7D-1095-474E-852E-AB56F863092D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09B9FE7D-1095-474E-852E-AB56F863092D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{09B9FE7D-1095-474E-852E-AB56F863092D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{09B9FE7D-1095-474E-852E-AB56F863092D}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

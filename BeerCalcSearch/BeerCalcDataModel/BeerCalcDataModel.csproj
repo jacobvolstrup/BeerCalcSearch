@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{19BA6F65-F54C-4C3A-9D2D-C1E31A3092CF}</ProjectGuid>
+    <ProjectGuid>{09B9FE7D-1095-474E-852E-AB56F863092D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BeerCalcDataSync</RootNamespace>
-    <AssemblyName>BeerCalcDataSync</AssemblyName>
+    <RootNamespace>BeerCalcDataModel</RootNamespace>
+    <AssemblyName>BeerCalcDataModel</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,20 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="WebDao\Parser\BeerstyleParser.cs" />
+    <Compile Include="BeerCalcModel.cs" />
+    <Compile Include="ExtensionMethods\StringExtensionMethods.cs" />
+    <Compile Include="Beerstyle.cs" />
+    <Compile Include="BeerstyleGroup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WebDao\BeerCalcWebDao.cs" />
-    <Compile Include="WebDao\BeerstyleWebDao.cs" />
-    <Compile Include="WebDao\Parser\MinMaxValueElement.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BeerCalcDataModel\BeerCalcDataModel.csproj">
-      <Project>{09B9FE7D-1095-474E-852E-AB56F863092D}</Project>
-      <Name>BeerCalcDataModel</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

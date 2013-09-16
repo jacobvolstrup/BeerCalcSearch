@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using BeerCalcDataSync.WebDao;
+using BeerCalcDataModel;
 
 namespace BeerCalcSyncGui
 {
@@ -13,6 +15,12 @@ namespace BeerCalcSyncGui
         [STAThread]
         static void Main()
         {
+            BeerstyleWebDao beerstyleDao = new BeerstyleWebDao();
+            BeerstyleGroup bsg = new BeerstyleGroup() { BeerstyleGroupKey = "dbj2011" };
+            beerstyleDao.GetBeerstyles(bsg);
+
+
+
             /*
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
