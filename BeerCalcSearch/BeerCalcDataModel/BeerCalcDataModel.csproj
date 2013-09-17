@@ -40,10 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BeerCalcModel.cs" />
+    <Compile Include="Model\BeerCalcModel.cs" />
     <Compile Include="ExtensionMethods\StringExtensionMethods.cs" />
-    <Compile Include="Beerstyle.cs" />
-    <Compile Include="BeerstyleGroup.cs" />
+    <Compile Include="Model\Beerstyle.cs" />
+    <Compile Include="Model\BeerstyleGroup.cs" />
+    <Compile Include="Model\Hop.cs" />
+    <Compile Include="Model\HopIngredientItem.cs" />
+    <Compile Include="Model\IndexItem.cs" />
+    <Compile Include="Model\Malt.cs" />
+    <Compile Include="Model\Recipe.cs" />
+    <Compile Include="Model\Yeast.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

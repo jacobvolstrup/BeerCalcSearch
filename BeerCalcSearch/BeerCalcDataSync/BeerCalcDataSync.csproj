@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.0\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,11 +43,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="WebDao\IndexCrawlerWebDao.cs" />
+    <Compile Include="WebDao\RecipeWebDao.cs" />
+    <Compile Include="WebDao\Parser\BeerCalcWebParser.cs" />
     <Compile Include="WebDao\Parser\BeerstyleParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebDao\BeerCalcWebDao.cs" />
     <Compile Include="WebDao\BeerstyleWebDao.cs" />
+    <Compile Include="WebDao\Parser\HopParser.cs" />
+    <Compile Include="WebDao\Parser\IndexParser.cs" />
+    <Compile Include="WebDao\Parser\MaltIngredientItem.cs" />
+    <Compile Include="WebDao\Parser\MaltParser.cs" />
     <Compile Include="WebDao\Parser\MinMaxValueElement.cs" />
+    <Compile Include="WebDao\Parser\RecipeParser.cs" />
+    <Compile Include="WebDao\Parser\YeastParser.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BeerCalcDataModel\BeerCalcDataModel.csproj">
@@ -54,6 +66,11 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

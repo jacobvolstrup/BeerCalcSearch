@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using BeerCalcDataModel;
+using BeerCalcDataModel.Model;
 using BeerCalcDataSync.WebDao.Parser;
 
 namespace BeerCalcDataSync.WebDao

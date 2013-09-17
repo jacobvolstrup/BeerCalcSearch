@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using BeerCalcDataModel.ExtensionMethods;
 using BeerCalcDataModel;
+using BeerCalcDataModel.Model;
 
 namespace BeerCalcDataSync.WebDao.Parser
 {
-    public class BeerstyleParser
+    public class BeerstyleParser : BeerCalcWebParser
     {
         public List<Beerstyle> Parse(string content)
         {
