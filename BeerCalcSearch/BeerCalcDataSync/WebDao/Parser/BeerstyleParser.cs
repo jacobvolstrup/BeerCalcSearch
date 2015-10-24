@@ -28,8 +28,8 @@ namespace BeerCalcDataSync.WebDao.Parser
             //TODO: medtag StilartGruppe i constructor
             Beerstyle result = new Beerstyle();
 
-            result.BeerstyleKey = content.GetStringBetween("<td class=\"stylehdr\">", "</td>");
-            result.BeerstyleName = content.GetStringBetween("<td class=\"stylehdr\" align=\"right\" colspan=\"5\">", "</td>");
+			result.BeerstyleKey = content.Substring("<td class=\"stylehdr\">", "</td>");
+			result.BeerstyleName = content.Substring("<td class=\"stylehdr\" align=\"right\" colspan=\"5\">", "</td>");
 
             result.BeskrivelseGenereltIndtryk = ParseBeskrivelse(content, "generelt indtryk");
             result.BeskrivelseUdseende = ParseBeskrivelse(content, "udseende");
@@ -38,7 +38,7 @@ namespace BeerCalcDataSync.WebDao.Parser
             result.BeskrivelseKrop = ParseBeskrivelse(content, "krop");
             result.BeskrivelseEksempler = ParseBeskrivelse(content, "eksempler");
 
-            List<string> egenskaberListe = content.GetListOfStringBetween("<tr bgcolor=\"white\" align=\"center\">", "</tr>");
+            List<string> egenskaberListe = content.Substrings("<tr bgcolor=\"white\" align=\"center\">", "</tr>");
             if (egenskaberListe.Count == 2)
             {
                 ParseEgenskaber(result, egenskaberListe[1]);
@@ -50,7 +50,7 @@ namespace BeerCalcDataSync.WebDao.Parser
         private void ParseEgenskaber(Beerstyle result, string egenskaberContent)
         {
 
-            List<string> egenskaber = egenskaberContent.GetListOfStringBetween("<td>", "</td>");
+            List<string> egenskaber = egenskaberContent.Substrings("<td>", "</td>");
             if (egenskaber.Count == 5)
             {
                 MinMaxValueElement minMaxOG = new MinMaxValueElement(egenskaber[0]);
@@ -88,7 +88,7 @@ namespace BeerCalcDataSync.WebDao.Parser
 
         private string ParseBeskrivelse(string content, string beskrivelseNavn)
         {
-            string result = content.GetStringBetween(string.Format("<td>{0}</td>", beskrivelseNavn), "</td>").RemoveTags("td").Trim();
+            string result = content.Substring(string.Format("<td>{0}</td>", beskrivelseNavn), "</td>").RemoveTags("td").Trim();
 
             return result;
         }

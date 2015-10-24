@@ -57,6 +57,7 @@
     <Compile Include="WebDao\Parser\MinMaxValueElement.cs" />
     <Compile Include="WebDao\Parser\RecipeParser.cs" />
     <Compile Include="WebDao\Parser\YeastParser.cs" />
+    <Compile Include="WebDao\Parser\BeerstyleGroupParser.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BeerCalcDataModel\BeerCalcDataModel.csproj">

@@ -26,13 +26,14 @@ namespace BeerCalcSyncGui
 
 
             IndexCrawlerWebDao indexCrawler = new IndexCrawlerWebDao();
-            List<IndexItem> indexItens = indexCrawler.GetIndexItems(5, 0, 50);
-            RecipeWebDao recipeDao = new RecipeWebDao();
-            List<Hop> hopList = recipeDao.GetHops(indexItens[0]);
-            List<Malt> maltList = recipeDao.GetMalts(indexItens[0]);
-            List<Yeast> yeastList = recipeDao.GetYeasts(indexItens[0]);
-            List<Recipe> recipes = recipeDao.GetRecipes(indexItens);
-
+            List<IndexItem> indexItems = indexCrawler.GetIndexItems(2, 0, 25);
+			RecipeWebDao recipeDao = new RecipeWebDao();
+			List<BeerstyleGroup> beerstyleGroups = recipeDao.GetBeerstyleGroups (indexItems [0]);
+			beerstyleDao.GetBeerstyles (beerstyleGroups);
+            List<Hop> hopList = recipeDao.GetHops(indexItems[0]);
+            List<Malt> maltList = recipeDao.GetMalts(indexItems[0]);
+			List<Yeast> yeastList = recipeDao.GetYeasts(indexItems[0]);
+            List<Recipe> recipes = recipeDao.GetRecipes(indexItems);
             /*
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

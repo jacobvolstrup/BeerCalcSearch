@@ -11,8 +11,9 @@ namespace BeerCalcDataSync.WebDao
     {
         private RecipeParser RecipeParser { get; set; }
         private HopParser HopParser { get; set; }
-        private MaltParser MaltParser { get; set; }
-        private YeastParser YeastParser { get; set; }
+		private MaltParser MaltParser { get; set; }
+		private YeastParser YeastParser { get; set; }
+		private BeerstyleGroupParser BeerstyleGroupParser { get; set; }
 
         public RecipeWebDao()
         {
@@ -20,6 +21,7 @@ namespace BeerCalcDataSync.WebDao
             HopParser = new HopParser();
             MaltParser = new MaltParser();
             YeastParser = new YeastParser();
+			BeerstyleGroupParser = new BeerstyleGroupParser ();
 
             /*
             List<Hop> hopList = hopParser.Parse(content);
@@ -85,5 +87,14 @@ namespace BeerCalcDataSync.WebDao
 
             return results;
         }
+
+		public List<BeerstyleGroup> GetBeerstyleGroups(IndexItem indexItem) {
+			var startTime = TimetrackingStart();
+			string content = GetRecipeContent(indexItem.PickName);
+			List<BeerstyleGroup> results = BeerstyleGroupParser.Parse(content);
+			Logger.Debug(string.Format("Hentede liste med {0} stilarter på {1}", results.Count(), TimetrackingEnd(startTime)));
+
+			return results;
+		}
     }
 }
